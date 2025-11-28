@@ -29,6 +29,9 @@ class StayOutTimerApp:
         self.start_time = None
         self.paused_time = 0
         
+        # Initialize settings dict to avoid errors
+        self.settings = {}
+        
         # Load settings and state
         self.load_settings()
         self.load_state()
@@ -525,19 +528,19 @@ class SettingsWindow:
         ttk.Label(parent, text="Дополнительные настройки", font=("Arial", 12, "bold")).pack(anchor=tk.W, pady=(10, 10))
         
         # Auto-save
-        self.auto_save_var = tk.BooleanVar(value=self.app.settings.get('auto_save', True))
+        self.auto_save_var = tk.BooleanVar(value=getattr(self.app, 'settings', {}).get('auto_save', True))
         auto_save_check = ttk.Checkbutton(parent, text="Автосохранение настроек", 
                                          variable=self.auto_save_var)
         auto_save_check.pack(anchor=tk.W, pady=(0, 10))
         
         # Startup position
         ttk.Label(parent, text="Положение окна при запуске:", font=("Arial", 10)).pack(anchor=tk.W, pady=(0, 5))
-        self.startup_pos_var = tk.StringVar(value=self.app.settings.get('startup_position', 'center'))
+        self.startup_pos_var = tk.StringVar(value=getattr(self.app, 'settings', {}).get('startup_position', 'center'))
         pos_combo = ttk.Combobox(parent, textvariable=self.startup_pos_var, 
                                 values=['center', 'top-left', 'top-right', 'bottom-left', 'bottom-right'], 
                                 state="readonly")
         pos_combo.pack(fill=tk.X, pady=(0, 10))
-        pos_combo.set(self.app.settings.get('startup_position', 'center'))
+        pos_combo.set(getattr(self.app, 'settings', {}).get('startup_position', 'center'))
     
     def choose_color(self, color_type):
         """Open color chooser dialog"""
