@@ -1,19 +1,43 @@
 ```
-# Batch files and executables
-*.bat
-*.exe
-*.com
-*.cmd
-
-# Logs and temporary files
+# Logs and temp files
 *.log
 *.tmp
-*.temp
-*.bak
-*.old
+*.swp
+
+# Environment
+.env
+.env.local
+*.env.*
+
+# Editors
+.vscode/
+.idea/
 
 # System files
+.DS_Store
 Thumbs.db
-desktop.ini
+
+# Compressed files
+*.zip
+*.gz
+*.tar
+*.tgz
+*.bz2
+*.xz
+*.7z
+*.rar
+*.zst
+*.lz4
+*.lzh
+*.cab
+*.arj
+*.rpm
+*.deb
+*.Z
+*.lz
+*.lzo
+*.tar.gz
+*.tar.bz2
+*.tar.xz
+*.tar.zst
 ```
-Network_Reset_Utility_Portable.zip

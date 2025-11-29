@@ -15,6 +15,15 @@ echo WHAT THIS DOES: Complete network stack reset, removes all network profiles
 echo RISKS: Complete network configuration loss, requires restart, need to reconfigure WiFi
 echo BENEFITS: Fixes all network-related issues, like starting fresh
 echo.
+echo *******************************************************************************
+echo * ПЕРЕВОД НА РУССКИЙ: ПОЛНЫЙ СБРОС - Полный сброс сетевого стека            *
+echo * ЧТО ЭТО ДЕЛАЕТ: Полный сброс сетевого стека, удаляет все сетевые профили  *
+echo * РИСКИ: Полная потеря сетевой конфигурации, требуется перезагрузка,        *
+echo *        нужно заново настроить Wi-Fi                                       *
+echo * ПРЕИМУЩЕСТВА: Исправляет все проблемы, связанные с сетью, как начать      *
+echo *              с нуля                                                        *
+echo *******************************************************************************
+echo.
 echo Press any key to continue with complete reset...
 echo WARNING: This will require a system restart to complete!
 echo WARNING: You will lose all network profiles and configurations!

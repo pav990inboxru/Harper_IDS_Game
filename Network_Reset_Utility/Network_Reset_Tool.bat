@@ -2,6 +2,26 @@
 color 0A
 title Network Reset Utility - Developed by Harper_IDS for IgromanDS
 
+REM ******************************************************************************
+REM *                   СЕТЕВАЯ УТИЛИТА СБРОСА (ПЕРЕВОД НА РУССКИЙ ЯЗЫК)         *
+REM *                   Network Reset Utility (Russian Translation)              *
+REM *                   Разработчик: Harper_IDS                                  *
+REM *                   Для игрового сообщества IgromanDS                        *
+REM ******************************************************************************
+REM *
+REM * ОПИСАНИЕ:
+REM * Эта утилита предназначена для устранения сетевых проблем, вызванных VPN,
+REM * изменениями DNS и различными сетевыми инструментами (zapret-discord-youtube,
+REM * nekobox, nekoray, adguard и др.), которые нарушают сетевые настройки Windows 11.
+REM *
+REM * ОСНОВНЫЕ ВОЗМОЖНОСТИ:
+REM * - Легкий сброс: Очистка только кэша DNS (перезагрузка не требуется)
+REM * - Средний сброс: Очистка DNS, ARP, кэша NetBIOS и сброс Winsock (перезагрузка не требуется)
+REM * - Тяжелый сброс: Сброс стека TCP/IP и сетевых адаптеров (перезагрузка не требуется)
+REM * - Полный сброс: Полный сброс сети (рекомендуется перезагрузка)
+REM * - Все операции включают подробные объяснения того, что они делают, риски и преимущества
+REM ******************************************************************************/
+
 :menu
 cls
 echo.
@@ -47,6 +67,13 @@ echo WHAT THIS DOES: Clears DNS cache to resolve minor DNS resolution issues
 echo RISKS: Minimal - No network disruption
 echo BENEFITS: Fixes temporary DNS problems, clears old DNS entries
 echo.
+echo ***************************************************************************
+echo * ПЕРЕВОД НА РУССКИЙ: ЛЕГКИЙ СБРОС - Очистка только кэша DNS              *
+echo * ЧТО ЭТО ДЕЛАЕТ: Очищает кэш DNS для решения незначительных проблем       *
+echo * РИСКИ: Минимальны - Без прерывания сети                                  *
+echo * ПРЕИМУЩЕСТВА: Исправляет временные проблемы с DNS, очищает старые записи *
+echo ***************************************************************************
+echo.
 pause
 ipconfig /flushdns
 echo.
@@ -61,6 +88,16 @@ echo.
 echo WHAT THIS DOES: Clears multiple network caches and resets Windows socket layer
 echo RISKS: Temporary network disconnection, may need to reconnect to WiFi
 echo BENEFITS: Resolves most network cache-related issues, fixes socket problems
+echo.
+echo ***************************************************************************
+echo * ПЕРЕВОД НА РУССКИЙ: СРЕДНИЙ СБРОС - Очистка кэша и сброс Winsock        *
+echo * ЧТО ЭТО ДЕЛАЕТ: Очищает несколько сетевых кэшей и сбрасывает уровень    *
+echo *                сокетов Windows                                          *
+echo * РИСКИ: Временное отключение от сети, может потребоваться повторное      *
+echo *        подключение к Wi-Fi                                              *
+echo * ПРЕИМУЩЕСТВА: Решает большинство проблем, связанных с кэшем сети,       *
+echo *              исправляет проблемы с сокетами                             *
+echo ***************************************************************************
 echo.
 pause
 ipconfig /flushdns
@@ -79,6 +116,15 @@ echo.
 echo WHAT THIS DOES: Resets TCP/IP stack to default configuration, resets network adapters
 echo RISKS: Complete network disconnection, requires network reconnection
 echo BENEFITS: Fixes deep TCP/IP stack issues, resolves adapter problems
+echo.
+echo ***************************************************************************
+echo * ПЕРЕВОД НА РУССКИЙ: ТЯЖЕЛЫЙ СБРОС - Сброс стека TCP/IP и адаптеров      *
+echo * ЧТО ЭТО ДЕЛАЕТ: Сбрасывает стек TCP/IP к конфигурации по умолчанию,     *
+echo *                сбрасывает сетевые адаптеры                              *
+echo * РИСКИ: Полное отключение от сети, требуется повторное подключение       *
+echo * ПРЕИМУЩЕСТВА: Исправляет глубокие проблемы со стеком TCP/IP,            *
+echo *              решает проблемы с адаптерами                               *
+echo ***************************************************************************
 echo.
 pause
 netsh int ip reset
@@ -101,6 +147,15 @@ echo RISKS: Complete network configuration loss, requires restart, need to recon
 echo BENEFITS: Fixes all network-related issues, like starting fresh
 echo.
 echo WARNING: This will require a system restart to complete!
+echo ***************************************************************************
+echo * ПЕРЕВОД НА РУССКИЙ: ПОЛНЫЙ СБРОС - Полный сброс сети                   *
+echo * ЧТО ЭТО ДЕЛАЕТ: Полный сброс сетевого стека, удаляет все сетевые        *
+echo *                профили                                                  *
+echo * РИСКИ: Полная потеря сетевой конфигурации, требуется перезагрузка,      *
+echo *        нужно заново настроить Wi-Fi                                     *
+echo * ПРЕИМУЩЕСТВА: Исправляет все проблемы, связанные с сетью, как начать    *
+echo *              с нуля                                                      *
+echo ***************************************************************************
 pause
 netsh winsock reset catalog
 netsh int ip reset

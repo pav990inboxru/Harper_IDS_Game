@@ -15,6 +15,13 @@ echo WHAT THIS DOES: Clears DNS cache to resolve minor DNS resolution issues
 echo RISKS: Minimal - No network disruption
 echo BENEFITS: Fixes temporary DNS problems, clears old DNS entries
 echo.
+echo *******************************************************************************
+echo * ПЕРЕВОД НА РУССКИЙ: ЛЕГКИЙ СБРОС - Очистка кэша DNS                        *
+echo * ЧТО ЭТО ДЕЛАЕТ: Очищает кэш DNS для решения незначительных проблем         *
+echo * РИСКИ: Минимальны - Без прерывания сети                                     *
+echo * ПРЕИМУЩЕСТВА: Исправляет временные проблемы с DNS, очищает старые записи    *
+echo *******************************************************************************
+echo.
 echo Press any key to continue with DNS cache clear...
 pause >nul
 

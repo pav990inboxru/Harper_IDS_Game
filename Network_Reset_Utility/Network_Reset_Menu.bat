@@ -2,6 +2,13 @@
 color 0A
 title Network Reset Utility Menu - Harper_IDS for IgromanDS
 
+REM ******************************************************************************
+REM *                   СЕТЕВАЯ УТИЛИТА СБРОСА - МЕНЮ (ПЕРЕВОД НА РУССКИЙ)       *
+REM *                   Network Reset Utility Menu (Russian Translation)           *
+REM *                   Разработчик: Harper_IDS                                    *
+REM *                   Для игрового сообщества IgromanDS                          *
+REM ******************************************************************************/
+
 :menu
 cls
 echo.

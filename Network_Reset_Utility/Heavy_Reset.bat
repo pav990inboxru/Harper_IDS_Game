@@ -15,6 +15,15 @@ echo WHAT THIS DOES: Resets TCP/IP stack to default configuration, resets networ
 echo RISKS: Complete network disconnection, requires network reconnection
 echo BENEFITS: Fixes deep TCP/IP stack issues, resolves adapter problems
 echo.
+echo *******************************************************************************
+echo * ПЕРЕВОД НА РУССКИЙ: ТЯЖЕЛЫЙ СБРОС - Сброс стека TCP/IP и адаптеров        *
+echo * ЧТО ЭТО ДЕЛАЕТ: Сбрасывает стек TCP/IP к конфигурации по умолчанию,        *
+echo *                сбрасывает сетевые адаптеры                                 *
+echo * РИСКИ: Полное отключение от сети, требуется повторное подключение          *
+echo * ПРЕИМУЩЕСТВА: Исправляет глубокие проблемы со стеком TCP/IP,               *
+echo *              решает проблемы с адаптерами                                  *
+echo *******************************************************************************
+echo.
 echo Press any key to continue with heavy reset...
 echo WARNING: This will disconnect your network connection!
 pause >nul
