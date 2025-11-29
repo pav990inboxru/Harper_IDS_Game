@@ -1,0 +1,58 @@
+@echo off
+color 0C
+title HEAVY RESET - TCP/IP Stack & Adapter Reset - Harper_IDS for IgromanDS
+
+REM Проверка прав администратора
+net session >nul 2>&1
+if %errorlevel% neq 0 (
+    echo.
+    echo *******************************************************************************
+    echo *                    ТРЕБУЮТСЯ ПРАВА АДМИНИСТРАТОРА                          *
+    echo *            Эта программа требует права администратора                      *
+    echo *       Пожалуйста, запустите этот файл от имени администратора              *
+    echo *******************************************************************************
+    echo.
+    pause
+    exit /b
+)
+
+echo.
+echo *******************************************************************************
+echo *                   HEAVY RESET - TCP/IP Stack & Adapter Reset                *
+echo *                     Developed by Harper_IDS for IgromanDS                   *
+echo *******************************************************************************
+echo.
+echo AUTHORSHIP: Harper_IDS - All rights reserved for IgromanDS community
+echo ===============================================================================
+echo.
+echo WHAT THIS DOES: Resets TCP/IP stack to default configuration, resets network adapters
+echo RISKS: Complete network disconnection, requires network reconnection
+echo BENEFITS: Fixes deep TCP/IP stack issues, resolves adapter problems
+echo.
+echo *******************************************************************************
+echo * ПЕРЕВОД НА РУССКИЙ: ТЯЖЕЛЫЙ СБРОС - Сброс стека TCP/IP и адаптеров        *
+echo * ЧТО ЭТО ДЕЛАЕТ: Сбрасывает стек TCP/IP к конфигурации по умолчанию,        *
+echo *                сбрасывает сетевые адаптеры                                 *
+echo * РИСКИ: Полное отключение от сети, требуется повторное подключение          *
+echo * ПРЕИМУЩЕСТВА: Исправляет глубокие проблемы со стеком TCP/IP,               *
+echo *              решает проблемы с адаптерами                                  *
+echo *******************************************************************************
+echo.
+echo Press any key to continue with heavy reset...
+echo ВНИМАНИЕ: Убедитесь, что вы хотите выполнить эту операцию! Это приведет к полному отключению от сети.
+echo ПРЕДУПРЕЖДЕНИЕ: Это отключит ваше сетевое подключение!
+pause >nul
+
+netsh int ip reset
+netsh int ipv4 reset
+netsh int ipv6 reset
+ipconfig /release
+ipconfig /renew
+ipconfig /flushdns
+
+echo.
+echo Heavy reset completed!
+echo.
+echo You need to reconnect to your network.
+echo You can now close this window or press any key to exit.
+pause >nul

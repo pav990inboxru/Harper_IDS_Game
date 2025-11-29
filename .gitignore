@@ -1,0 +1,12 @@
+```
+# Batch files and Windows artifacts
+*.tmp
+*.log
+Thumbs.db
+desktop.ini
+
+# Network reset utility specific
+Network_Reset_Utility/*.tmp
+Network_Reset_Utility/*.log
+```
+Network_Reset_Utility_Portable.zip
