@@ -2,6 +2,20 @@
 color 04
 title COMPLETE RESET - Full Network Stack Reset - Harper_IDS for IgromanDS
 
+REM Проверка прав администратора
+net session >nul 2>&1
+if %errorlevel% neq 0 (
+    echo.
+    echo *******************************************************************************
+    echo *                    ТРЕБУЮТСЯ ПРАВА АДМИНИСТРАТОРА                          *
+    echo *            Эта программа требует права администратора                      *
+    echo *       Пожалуйста, запустите этот файл от имени администратора              *
+    echo *******************************************************************************
+    echo.
+    pause
+    exit /b
+)
+
 echo.
 echo *******************************************************************************
 echo *                    COMPLETE RESET - Full Network Stack Reset                *
@@ -25,8 +39,9 @@ echo *              с нуля                                                 
 echo *******************************************************************************
 echo.
 echo Press any key to continue with complete reset...
-echo WARNING: This will require a system restart to complete!
-echo WARNING: You will lose all network profiles and configurations!
+echo ВНИМАНИЕ: Убедитесь, что вы хотите выполнить эту операцию! Это приведет к полной потере сетевой конфигурации.
+echo ПРЕДУПРЕЖДЕНИЕ: Для завершения потребуется перезагрузка системы!
+echo ПРЕДУПРЕЖДЕНИЕ: Вы потеряете все сетевые профили и конфигурации!
 pause >nul
 
 netsh winsock reset catalog

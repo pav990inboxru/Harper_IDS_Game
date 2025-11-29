@@ -2,6 +2,20 @@
 color 0C
 title HEAVY RESET - TCP/IP Stack & Adapter Reset - Harper_IDS for IgromanDS
 
+REM Проверка прав администратора
+net session >nul 2>&1
+if %errorlevel% neq 0 (
+    echo.
+    echo *******************************************************************************
+    echo *                    ТРЕБУЮТСЯ ПРАВА АДМИНИСТРАТОРА                          *
+    echo *            Эта программа требует права администратора                      *
+    echo *       Пожалуйста, запустите этот файл от имени администратора              *
+    echo *******************************************************************************
+    echo.
+    pause
+    exit /b
+)
+
 echo.
 echo *******************************************************************************
 echo *                   HEAVY RESET - TCP/IP Stack & Adapter Reset                *
@@ -25,7 +39,8 @@ echo *              решает проблемы с адаптерами       
 echo *******************************************************************************
 echo.
 echo Press any key to continue with heavy reset...
-echo WARNING: This will disconnect your network connection!
+echo ВНИМАНИЕ: Убедитесь, что вы хотите выполнить эту операцию! Это приведет к полному отключению от сети.
+echo ПРЕДУПРЕЖДЕНИЕ: Это отключит ваше сетевое подключение!
 pause >nul
 
 netsh int ip reset
