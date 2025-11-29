@@ -11,31 +11,36 @@ if errorlevel 1 (
     exit /b 1
 )
 
-REM Проверка наличия pip
-pip --version > nul 2>&1
+REM Используем python -m pip вместо прямого вызова pip
+echo Проверка и обновление pip...
+python -m pip --version > nul 2>&1
 if errorlevel 1 (
-    echo pip не найден. Пожалуйста, убедитесь, что Python установлен правильно.
-    echo Попробуйте установить Python с https://www.python.org/downloads/
-    pause
-    exit /b 1
+    echo pip не найден как модуль Python. Пытаемся установить...
+    python -m ensurepip --upgrade
+    if errorlevel 1 (
+        echo Не удалось установить pip. Пожалуйста, убедитесь, что Python установлен правильно.
+        echo Попробуйте установить Python с https://www.python.org/downloads/
+        pause
+        exit /b 1
+    )
 )
 
 REM Обновление pip
 echo Обновление pip...
-pip install --upgrade pip
+python -m pip install --upgrade pip
 
 REM Установка зависимостей из requirements.txt
 echo Установка зависимостей из requirements.txt...
 if exist requirements.txt (
-    pip install -r requirements.txt
+    python -m pip install -r requirements.txt
 ) else (
     echo Файл requirements.txt не найден, устанавливаем стандартные зависимости...
-    pip install Pillow
+    python -m pip install Pillow
 )
 
 REM Установка дополнительных полезных пакетов
 echo Установка дополнительных пакетов...
-pip install --upgrade setuptools wheel
+python -m pip install --upgrade setuptools wheel
 
 echo.
 echo Установка всех зависимостей завершена!

@@ -18,6 +18,8 @@ dist/
 build/
 target/
 .gradle/
+.mypy_cache/
+.pytest_cache/
 
 # Logs and temp files
 *.log
@@ -42,12 +44,6 @@ Thumbs.db
 coverage/
 htmlcov/
 .coverage
-
-# MyPy
-.mypy_cache/
-
-# Pytest
-.pytest_cache/
 
 # Compressed files
 *.zip
