@@ -1,0 +1,82 @@
+```
+# Compiled and build artifacts
+*.pyc
+__pycache__/
+*.o
+*.obj
+
+# Dependencies
+venv/
+.venv/
+.env
+.env.local
+*.env.*
+
+# Logs and temp files
+*.log
+*.tmp
+*.swp
+
+# Editors
+.vscode/
+.idea/
+
+# Distribution and build files
+dist/
+build/
+target/
+
+# Python specific
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+.Python
+env/
+.venv/
+venv/
+ENV/
+.env
+.env.local
+.env.*
+!.env.example
+!.env.sample
+!.env*.local
+!.env*.sample
+*.env
+.env.local
+.env.*
+!.env.example
+!.env.sample
+!.env*.local
+!.env*.sample
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Icon?
+*.lnk
+
+# macOS
+.DS_Store
+
+# Backup files
+*~
+*.bak
+*.swp
+*.swo
+
+# IDE
+.idea/
+*.swp
+*.swo
+
+# Environment specific
+.env
+.env.local
+.env.*
+!.env.example
+!.env.sample
+!.env*.local
+!.env*.sample
+```
