@@ -1,0 +1,19 @@
+```
+# Batch files and executables
+*.bat
+*.exe
+*.com
+*.cmd
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+*.bak
+*.old
+
+# System files
+Thumbs.db
+desktop.ini
+```
+Network_Reset_Utility_Portable.zip

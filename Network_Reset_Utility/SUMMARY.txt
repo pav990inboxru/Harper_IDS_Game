@@ -1,0 +1,56 @@
+NETWORK RESET UTILITY - COMPLETE PACKAGE SUMMARY
+Developed by Harper_IDS for IgromanDS Gaming Community
+
+============================================================
+AUTHORSHIP: Harper_IDS - All rights reserved for IgromanDS community
+============================================================
+
+PACKAGE CONTENTS:
+1. Network_Reset_Tool.bat - Main utility with 6 options (menu-based)
+2. Network_Reset_Menu.bat - Alternative menu with gradient from light to complete
+3. All_in_One.bat - Quick access to all utilities in one place
+4. Individual reset tools:
+   - Light_Reset.bat - Clear DNS cache only (no restart)
+   - Medium_Reset.bat - Clear caches + reset Winsock (no restart) 
+   - Heavy_Reset.bat - Reset TCP/IP stack + adapters (no restart)
+   - Complete_Reset.bat - Full network reset (restart recommended)
+   - Extreme_Reset.bat - All commands in sequence (restart required)
+5. Utility tools:
+   - View_Network_Settings.bat - Show current network configuration
+   - System_Check.bat - Diagnose network issues and provide recommendations
+   - Restart_Computer.bat - Restart with 30s countdown
+   - Cancel_Restart.bat - Cancel any pending restarts
+6. Installation tools:
+   - INSTALL.bat - Create desktop and start menu shortcuts
+   - UNINSTALL.bat - Remove shortcuts and entries
+7. Documentation:
+   - README.txt - Complete instructions and usage guide
+   - SUMMARY.txt - This file
+8. Packaging:
+   - Create_Portable_ZIP.bat - Create ZIP archive for USB transfer
+   - Network_Reset_Utility_Portable.zip - Pre-built portable archive
+
+FEATURES:
+- Gradient approach from light (DNS only) to complete (full reset) network fixes
+- Each option includes detailed explanations of WHAT, RISKS, and BENEFITS
+- No restart required for light/medium/heavy options
+- Restart recommended for complete/extreme options
+- All tools include authorship information (Harper_IDS for IgromanDS)
+- Portable design - works from USB drive without installation
+- Administrator privileges recommended for all operations
+
+TARGET USE CASES:
+- Network issues from VPN usage (zapret-discord-youtube, nekobox, nekoray)
+- DNS configuration problems from various tools (adguard, etc.)
+- General network stack corruption in Windows 11
+- Temporary network connectivity issues
+- Persistent network configuration problems
+
+USAGE RECOMMENDATIONS:
+1. For minor DNS issues: Use Light Reset
+2. For moderate cache problems: Use Medium Reset
+3. For persistent TCP/IP issues: Use Heavy Reset
+4. For VPN/DNS tool conflicts: Use Complete Reset
+5. For severe network problems: Use Extreme Reset
+
+IMPORTANT: Always run as Administrator for best results!
