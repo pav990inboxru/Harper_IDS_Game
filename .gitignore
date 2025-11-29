@@ -1,13 +1,8 @@
 ```
-# Compiled and build artifacts
-*.pyc
-__pycache__/
-*.o
-*.obj
+# Compressed files
+*.zip
 
-# Dependencies
-venv/
-.venv/
+# Environment
 .env
 .env.local
 *.env.*
@@ -21,62 +16,21 @@ venv/
 .vscode/
 .idea/
 
-# Distribution and build files
+# Build artifacts
 dist/
 build/
 target/
 
-# Python specific
-*.pyc
-__pycache__/
-*.pyo
-*.pyd
-.Python
-env/
-.venv/
+# Dependencies
+node_modules/
 venv/
-ENV/
-.env
-.env.local
-.env.*
-!.env.example
-!.env.sample
-!.env*.local
-!.env*.sample
-*.env
-.env.local
-.env.*
-!.env.example
-!.env.sample
-!.env*.local
-!.env*.sample
+.venv/
+__pycache__/
+.mypy_cache/
+.pytest_cache/
+.gradle/
 
-# Windows
-Thumbs.db
-ehthumbs.db
-Icon?
-*.lnk
-
-# macOS
+# System files
 .DS_Store
-
-# Backup files
-*~
-*.bak
-*.swp
-*.swo
-
-# IDE
-.idea/
-*.swp
-*.swo
-
-# Environment specific
-.env
-.env.local
-.env.*
-!.env.example
-!.env.sample
-!.env*.local
-!.env*.sample
+Thumbs.db
 ```
